@@ -1,14 +1,15 @@
-import os
-import pytest
-import util_test
 import collections
-import tarfile
 import io
+import os
+import tarfile
+
+import pytest
+from open_clip_train.data import get_wds_dataset
+from open_clip_train.main import random_seed
+from open_clip_train.params import parse_args
 from PIL import Image
 
-from open_clip_train.data import get_wds_dataset
-from open_clip_train.params import parse_args
-from open_clip_train.main import random_seed
+import util_test
 
 TRAIN_NUM_SAMPLES = 10_000
 RTOL = 0.2

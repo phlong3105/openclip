@@ -1,6 +1,3 @@
-import requests
-import torch
-from PIL import Image
 import hashlib
 import tempfile
 import unittest
@@ -8,11 +5,13 @@ from io import BytesIO
 from pathlib import Path
 from unittest.mock import patch
 
+import open_clip
+import requests
+import torch
+from open_clip.pretrained import download_pretrained_from_url
+from PIL import Image
 from urllib3 import HTTPResponse
 from urllib3._collections import HTTPHeaderDict
-
-import open_clip
-from open_clip.pretrained import download_pretrained_from_url
 
 
 class DownloadPretrainedTests(unittest.TestCase):

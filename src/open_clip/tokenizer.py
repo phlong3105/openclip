@@ -7,9 +7,9 @@ import html
 import os
 import random
 import string
+import warnings
 from functools import lru_cache, partial
 from typing import Callable, List, Optional, Union
-import warnings
 
 import ftfy
 import numpy as np

@@ -1,9 +1,11 @@
-import torch
-from PIL import Image
-from open_clip.factory import get_tokenizer
-import pytest
-import open_clip
 import os
+
+import open_clip
+import pytest
+import torch
+from open_clip.factory import get_tokenizer
+from PIL import Image
+
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 if hasattr(torch._C, '_jit_set_profiling_executor'):

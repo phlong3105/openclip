@@ -2,12 +2,11 @@ import copy
 import glob
 import logging
 import os
+import random
 import re
 import subprocess
 import sys
-import random
 from datetime import datetime
-from functools import partial
 
 import numpy as np
 import torch

@@ -1,6 +1,7 @@
-import torch
 from contextlib import suppress
 from functools import partial
+
+import torch
 
 
 def get_autocast(precision, device_type='cuda'):

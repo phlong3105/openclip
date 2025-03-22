@@ -1,9 +1,10 @@
 import argparse
 
-import torch
 import open_clip
 import pandas as pd
+import torch
 from torch.utils.flop_counter import FlopCounterMode
+
 try:
     import fvcore
 except:

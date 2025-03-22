@@ -5,20 +5,26 @@ import math
 import os
 import random
 import sys
-import braceexpand
 from dataclasses import dataclass
 from multiprocessing import Value
 
+import braceexpand
 import numpy as np
 import pandas as pd
 import torch
 import torchvision.datasets as datasets
 import webdataset as wds
 from PIL import Image
-from torch.utils.data import Dataset, DataLoader, SubsetRandomSampler, IterableDataset, get_worker_info
+from torch.utils.data import (
+	DataLoader, Dataset, get_worker_info,
+	IterableDataset, SubsetRandomSampler,
+)
 from torch.utils.data.distributed import DistributedSampler
 from webdataset.filters import _shuffle
-from webdataset.tariterators import base_plus_ext, url_opener, tar_file_expander, valid_sample
+from webdataset.tariterators import (
+	base_plus_ext, tar_file_expander,
+	url_opener, valid_sample,
+)
 
 try:
     import horovod.torch as hvd

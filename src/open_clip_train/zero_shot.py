@@ -1,11 +1,12 @@
 import logging
 
 import torch
-from tqdm import tqdm
-
-from open_clip import get_input_dtype, get_tokenizer, build_zero_shot_classifier, \
-    IMAGENET_CLASSNAMES, OPENAI_IMAGENET_TEMPLATES
+from open_clip import (
+	build_zero_shot_classifier, get_input_dtype,
+	get_tokenizer, IMAGENET_CLASSNAMES, OPENAI_IMAGENET_TEMPLATES,
+)
 from open_clip_train.precision import get_autocast
+from tqdm import tqdm
 
 
 def accuracy(output, target, topk=(1,)):

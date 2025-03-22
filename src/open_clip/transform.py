@@ -1,13 +1,15 @@
 import numbers
 import random
 import warnings
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple, Union
 
 import torch
 import torchvision.transforms.functional as F
-from torchvision.transforms import Normalize, Compose, RandomResizedCrop, InterpolationMode, ToTensor, Resize, \
-    CenterCrop, ColorJitter, Grayscale
+from torchvision.transforms import (
+	CenterCrop, ColorJitter, Compose, Grayscale,
+	InterpolationMode, Normalize, RandomResizedCrop, Resize, ToTensor,
+)
 
 from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
 from .utils import to_2tuple

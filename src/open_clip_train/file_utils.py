@@ -1,11 +1,11 @@
 import logging
-import os
 import multiprocessing
 import subprocess
 import time
+
 import fsspec
 import torch
-from tqdm import tqdm
+
 
 def remote_sync_s3(local_dir, remote_dir):
     # skip epoch_latest which can change during sync.

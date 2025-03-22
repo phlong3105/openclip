@@ -6,20 +6,21 @@ import copy
 import logging
 import math
 from dataclasses import dataclass
+from functools import partial
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 from torch import nn
-from torch.utils.checkpoint import checkpoint
-from functools import partial
 
 from .hf_model import HFTextEncoder
 from .modified_resnet import ModifiedResNet
 from .timm_model import TimmModel
-from .transformer import LayerNormFp32, LayerNorm, QuickGELU, Attention, VisionTransformer, TextTransformer,\
-    text_global_pool
+from .transformer import (
+	Attention, LayerNorm, LayerNormFp32, QuickGELU,
+	text_global_pool, TextTransformer, VisionTransformer,
+)
 from .utils import to_2tuple
 
 

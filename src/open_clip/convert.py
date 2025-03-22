@@ -2,8 +2,8 @@
 """
 from typing import Union
 
-import torch
 import numpy as np
+import torch
 
 from .model import CLIP, CustomTextCLIP
 from .transformer import TextTransformer, Transformer

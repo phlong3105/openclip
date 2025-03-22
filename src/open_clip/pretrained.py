@@ -4,10 +4,9 @@ import os
 import urllib
 import warnings
 from functools import partial
-from typing import Dict, Iterable, Optional, Union
+from typing import Dict, Iterable, Optional
 
 from tqdm import tqdm
-
 
 try:
     import safetensors.torch

@@ -1,5 +1,5 @@
-from collections import OrderedDict
 import math
+from collections import OrderedDict
 from typing import Callable, Dict, List, Optional, Sequence, Tuple, Union
 
 import torch
@@ -7,8 +7,8 @@ from torch import nn
 from torch.nn import functional as F
 from torch.utils.checkpoint import checkpoint
 
-from .utils import to_2tuple, feature_take_indices
 from .pos_embed import get_2d_sincos_pos_embed
+from .utils import feature_take_indices, to_2tuple
 
 
 class LayerNormFp32(nn.LayerNorm):

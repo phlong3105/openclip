@@ -1,8 +1,10 @@
 
 import os
+
+import open_clip
 import pytest
 import torch
-import open_clip
+
 import util_test
 
 os.environ['CUDA_VISIBLE_DEVICES'] = ''
@@ -127,7 +129,3 @@ def test_inference_with_data(
         test_model = torch.jit.script(test_model)
         model_out = util_test.forward_model(test_model, model_name, preprocess_val, input_image, input_text)
         assert model_out["test_output"].shape[-1] == 2
-        
-    
-
-

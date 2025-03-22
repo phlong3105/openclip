@@ -1,18 +1,18 @@
+from dataclasses import dataclass
 from typing import Dict, List, Optional, Union
 
+import numpy as np
 import torch
 from torch import nn
 from torch.nn import functional as F
-import numpy as np
-from dataclasses import dataclass
 
-from .transformer import (
-    LayerNormFp32,
-    LayerNorm,
-    QuickGELU,
-    MultimodalTransformer,
+from .model import (
+	_build_text_tower, _build_vision_tower, CLIPTextCfg,
+	CLIPVisionCfg,
 )
-from .model import CLIPTextCfg, CLIPVisionCfg, _build_vision_tower, _build_text_tower
+from .transformer import (
+	LayerNorm, LayerNormFp32, MultimodalTransformer, QuickGELU,
+)
 
 try:
     from transformers import (

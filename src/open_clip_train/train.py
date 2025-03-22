@@ -7,7 +7,6 @@ import time
 import numpy as np
 import torch
 import torch.nn.functional as F
-from torch.nn.parallel.distributed import DistributedDataParallel
 
 try:
     import wandb

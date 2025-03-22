@@ -1,8 +1,9 @@
 import os
 import random
+
 import numpy as np
-from PIL import Image
 import torch
+from PIL import Image
 
 if __name__ != '__main__':
     import open_clip
@@ -320,4 +321,3 @@ def main(args):
 if __name__ == '__main__':
     import sys
     main(sys.argv[1:])
-

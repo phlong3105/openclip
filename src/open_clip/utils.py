@@ -3,8 +3,7 @@ from itertools import repeat
 from typing import List, Optional, Tuple, Union
 
 import torch
-from torch import nn as nn
-from torch import _assert
+from torch import _assert, nn as nn
 from torchvision.ops.misc import FrozenBatchNorm2d
 
 
